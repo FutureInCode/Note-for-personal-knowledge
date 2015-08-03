@@ -1,3 +1,5 @@
+/*通用样式
+--------------------------------------------------------------------------------------*/
 *{
 	font-family:微软雅黑,宋体;
 	margin:0px;
@@ -5,6 +7,7 @@
 }
 body{
 	font-size:13px;
+	overflow:hidden;
 }
 header{
 	position:absolute;
@@ -32,15 +35,7 @@ td{
 	font-size:20px;
 	color:#336699;
 }
-#noteList{
-	position:absolute;
-	top:70px;
-	float:left;
-	width:15%;
-	height:550px;
-	background-color:#99cccc;
-	z-index:100;
-}
+
 h3{
 	width:100%;
 	height:8%;
@@ -50,6 +45,32 @@ h3{
 	color:white;
 	font-weight:bold;
 	font-size:25px;
+}
+button{
+	position:absolute;
+	left:97.5%;
+	top:2%;
+	border:0px solid;
+	background-color:#336699;
+	background-image:url(../images/deleteIcon_1.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	width:20px;
+	height:20px;
+	border-radius:0.5em;
+	cursor:pointer;
+	padding:3px;
+}
+/*页面组件样式
+--------------------------------------------------------------------------------------*/
+#noteList{
+	position:absolute;
+	top:70px;
+	float:left;
+	width:15%;
+	height:600px;
+	background-color:#99cccc;
+	z-index:100;
 }
 .noteContent{
 	position:absolute;
@@ -76,22 +97,21 @@ input[type="button"]:hover{
 	color:#99cccc;
 	border-color:#99cccc;
 }
-ul{
-	height:82%;
-	width:100%;
-	text-align:center;
-}
-li{
-	list-style-type:none;
-}
+
 .noteTitle{
 	width:100%;
-	line-height:300%;
+	height:40px;
+	background-color:#99cccc;
 	border-top:0.5px solid;
 	border-bottom:0.5px solid;
 	border-color:white;
-	transition:0.5s width;
+	transition:0.5s all;
 	cursor:pointer;
+	overflow:hidden;/*将超过空间的文本隐藏并用省略号表示*/
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	-webkit-text-overflow:ellipsis;
 }
 .noteTitle:hover{
 	width:350px;
@@ -100,12 +120,28 @@ li{
 	border-color:#99cccc;
 }
 #classifications{
-	border-collapse:collapse;
+	float:left;
+	height:100%;
+	width:75%;
+	padding:0px;
+	margin:0px;
+	background-color:#ffcc33;
 }
 .classificationTd{
-	border:0.5px solid;
-	border-color:white;
+	float:left;
+	position:relative;
+	width:19.8%;
+	height:49.9%;
+	border-left:0.5px solid;
+	border-right:0.5px solid;
+	border-bottom:0.5px solid;
+	border-right-color:white;
+	border-bottom-color:white;
 	cursor:pointer;
+	text-align:center;
+	font-size:20px;
+	color:white;
+	font-weight:bold;
 }
 .classificationTd:hover{
 	background-color:white;
@@ -117,13 +153,14 @@ li{
 	height:100%;
 	background-color:#99cccc;
 	border-radius:0em;
+	clear:both;
 }
 #groupButton:hover{
 	background-color:white;
 	border-color:#99cccc;
 	color:#99cccc;
 }
-#title{
+.title{
 	line-height:300%;
 	width:100%;
 	text-align:center;
@@ -132,18 +169,163 @@ li{
 	color:white;
 	font-size:28px;
 }
-#title>h1{
+.title>h1{
 	width:100%;
 }
-#noteContentId{
+#noteContentEdition{
+	position:relative;
+	left:-2000px;
 }
 #editLabel{
 	width:100%;
 	line-height:300%;
 	font-size:28px;
-	color:#336699;
+	color:white;
+	margin-left:auto;
+	margin-right:auto;
 }
+/*
 #editLabel+textarea{
 	width:100%;
-	height:500px;
+	height:465px;
+	padding:20px;
+}
+*/
+#list{
+	height:82%;
+	width:100%;
+	text-align:center;
+}
+.modifyButton{
+	position:absolute;
+	left:95%;
+	top:2%;
+	border:0px solid;
+	background-color:#336699;
+	background-image:url(../images/modification.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	width:20px;
+	height:20px;
+	border-radius:0.5em;
+	cursor:pointer;
+	padding:5px;
+}
+.modifyButton:hover{
+	background-color:white;
+}
+.classificationTd button{
+	position:relative;
+	right:30px;
+	top:-10px;
+	margin-left:-15px;
+	display:none;
+	width:20px;
+	height:20px;
+	background:url(../images/deleteIcon.png) no-repeat center center;
+}
+.classificationTd:hover button{
+	display:block;
+}
+.classificationTd button:hover{
+	background-color:#ffcc33;
+}
+.deleteButton:hover{
+	background-color:white;
+}
+#contentDisplay textarea{
+	padding:20px;
+}
+#contentDisplay{
+}
+#editLabel input{
+	width:50%;
+	line-height:2em;
+	font-size:15px;
+}
+#noteContentEdition textarea{
+	padding:20px;
+	height:70%;
+}
+#noteContentEdition p{
+	position:relative;
+	height:10%;
+}
+#noteContentEdition button{
+	border-color:#336699;
+	background-color:#336699;
+	color:white;
+	height:30px;
+	width:10%;
+	background-image:none;
+	border-radius:1em;
+}
+.finishButt{
+	position:absolute;
+	left:35%;
+	top:10px;
+}
+.finishButt:hover{
+	background-color:white;
+	color:#336699;
+	border:0.5px solid;
+	border-color:#336699;
+}
+.cancelButt{
+	position:absolute;
+	left:60%;
+	top:10px;
+}
+.cancelButt:hover{
+	background-color:white;
+	color:#336699;
+	border:0.5px solid;
+	border-color:#336699;
+}
+#groupEdition div{
+	position:absolute;
+	top:25%;
+	left:25%;
+	width:50%;
+	height:50%;
+}
+#groupEdition p{
+	position:relative;
+	text-align:center;
+	padding:25px;
+}
+#groupEdition button{
+	border-color:#336699;
+	background-color:#336699;
+	color:white;
+	height:30px;
+	width:15%;
+	background-image:none;
+	border-radius:1em;
+}
+#groupEdition .finishButt{
+	left:28%;
+}
+#groupEdition .finishButt:hover{
+	background-color:white;
+	color:#336699;
+	border:0.5px solid;
+	border-color:#336699;
+}
+#groupEdition .cancelButt{
+	left:57%;
+}
+#groupEdition .cancelButt:hover{
+	background-color:white;
+	color:#336699;
+	border:0.5px solid;
+	border-color:#336699;
+}
+#groupName{
+	font-size:15px;
+	color:#336699;
+	font-weight:bold;
+}
+#groupEdition{
+	left:2000px;
 }

@@ -11,30 +11,47 @@
 	<body>
 		<header>
 			<h1>笔记本</h1>
-			<table id="classifications">
+			<!--table id="classifications">
 				<tr>
-					<td class="classificationTd">分组1</td><td class="classificationTd"></td><td class="classificationTd"></td><td class="classificationTd"></td><td class="classificationTd"></td>
+					<td class="classificationTd">分组1<button></button></td>
 				</tr>
-				<tr>
-					<td></td><td></td><td></td><td></td><td></td>
-				</tr>
-			</table>
+			</table-->
+			<div id="classifications">
+				<div class="classificationTd">分组1<button alt="删除分组"></button></div><div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div>
+				<div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div>
+			</div>
 			<input type="button" id="groupButton" value="新建分组"></input>
 		</header>
 		<section id="noteList">
 			<h3>分组1</h3>
-			<ul>
-				<li class="noteTitle">这是一篇测试笔记！</li>
-			</ul>			
-			<input type="button" value="新建笔记"></input>
+			<div id="list">
+				<p class="noteTitle">这是一篇测试笔记！24234232423423423423423423423423</p>
+				<input type="button" value="新建笔记"></input>
+			</div>
 		</section>
-		<section class="noteContent">
-			<section id="title"><h1>这是一篇测试笔记！</h1></section>
-			<section></section>
+		<section class="noteContent" id="contentDisplay">
+			<section class="title"><h1>这是一篇测试笔记！</h1><button class="modifyButton"></button><button class="deleteButton"></button></section>
+			<textarea cols="146" rows="20" disabled="disabled">
+			</textarea>
 		</section>
-		<section class="noteContent" id="noteContentId">
-			<label id="editLabel">标题：<input></input></label>
-			<textarea></textarea>
+		<section class="noteContent" id="noteContentEdition">
+			<section class="title"><label id="editLabel" for="titleInput">标题：<input size="80"></input></label></section>
+			<textarea cols="141" rows="20"></textarea>
+			<p>
+				<button class="finishButt" value="完成">完成</button>
+				<button class="cancelButt" value="取消">取消</button>
+			</p>
+		</section>
+		<section class="noteContent" id="groupEdition">
+			<div>
+				<p>
+					<label id="groupName">请输入分组名：<input></input></label>
+				</p>
+				<p>
+					<button class="finishButt">完成</button>
+					<button class="cancelButt">取消</button>
+				</p>
+			</div>
 		</section>
 	</body>
 </html>
