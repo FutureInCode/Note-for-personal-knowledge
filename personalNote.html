@@ -11,32 +11,28 @@
 	<body>
 		<header>
 			<h1>笔记本</h1>
-			<!--table id="classifications">
-				<tr>
-					<td class="classificationTd">分组1<button></button></td>
-				</tr>
-			</table-->
 			<div id="classifications">
-				<div class="classificationTd">分组1<button alt="删除分组"></button></div><div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div>
-				<div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div>
+				<!--div class="classificationTd">分组1<button alt="删除分组"></button></div><div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div>
+				<div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div><div class="classificationTd">分组1<button></button></div-->
 			</div>
 			<input type="button" id="groupButton" value="新建分组"></input>
 		</header>
 		<section id="noteList">
-			<h3>分组1</h3>
+			<h3>请创建分组</h3>
 			<div id="list">
-				<p class="noteTitle">这是一篇测试笔记！24234232423423423423423423423423</p>
+				<!--p class="noteTitle">这是一篇测试笔记！24234232423423423423423423423423</p-->
 				<input type="button" value="新建笔记"></input>
 			</div>
 		</section>
 		<section class="noteContent" id="contentDisplay">
-			<section class="title"><h1>这是一篇测试笔记！</h1><button class="modifyButton"></button><button class="deleteButton"></button></section>
-			<textarea cols="146" rows="20" disabled="disabled">
-			</textarea>
+			<!--section class="title"><h1>这是一篇测试笔记！</h1><button class="modifyButton"></button><button class="deleteButton"></button></section>
+			<textarea cols="146" rows="20" disabled="disabled" id="noteContentDisplay">
+			</textarea-->
+			<section class="title"><h1>欢迎使用web笔记本！</h1></section>
 		</section>
 		<section class="noteContent" id="noteContentEdition">
-			<section class="title"><label id="editLabel" for="titleInput">标题：<input size="80"></input></label></section>
-			<textarea cols="141" rows="20"></textarea>
+			<section class="title"><label id="editLabel" for="titleInput">标题：<input size="80" id="labelInput"></input></label></section>
+			<textarea cols="141" rows="20" id="noteContentArea"></textarea>
 			<p>
 				<button class="finishButt" value="完成">完成</button>
 				<button class="cancelButt" value="取消">取消</button>
@@ -45,12 +41,17 @@
 		<section class="noteContent" id="groupEdition">
 			<div>
 				<p>
-					<label id="groupName">请输入分组名：<input></input></label>
+					<label id="groupName">请输入分组名：<input id="groupNameInput"></input></label>
 				</p>
 				<p>
 					<button class="finishButt">完成</button>
 					<button class="cancelButt">取消</button>
 				</p>
+			</div>
+		</section>
+		<section class="noteContent" id="noteLabel">
+			<div>
+				<label>请选择你的笔记！</label>
 			</div>
 		</section>
 	</body>
