@@ -329,3 +329,14 @@ input[type="button"]:hover{
 #groupEdition{
 	left:2000px;
 }
+#noteLabel{
+	left:2000px;
+}
+#noteLabel label{
+	position:absolute;
+	top:40%;
+	left:40%;
+	font-size:20px;
+	font-weight:bold;
+	color:#336699;
+}
